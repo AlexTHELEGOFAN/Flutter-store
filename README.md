@@ -1,2 +1,2 @@
-# Brickdata
+# Flutter shop
 My first Flutter project
