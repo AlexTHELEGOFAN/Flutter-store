@@ -1,5 +1,5 @@
-import 'package:brickdata/ui/widgets/home/getx_store_bindings.dart';
-import 'package:brickdata/ui/widgets/home/getx_store_view.dart';
+import 'package:brickdata/ui/widgets/home/getx_product_bindings.dart';
+import 'package:brickdata/ui/widgets/home/getx_product_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -18,15 +18,15 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       color: Colors.red,
-      initialBinding: GetxStoreBindings(),
+      initialBinding: GetxProductBindings(),
       getPages: [
         GetPage(
           name: "/home",
-          page: () => const GetxStoreView(),
-          binding: GetxStoreBindings(),
+          page: () => const GetxProductView(),
+          binding: GetxProductBindings(),
         )
       ],
-      initialRoute: "home",
+      initialRoute: "/home",
     );
   }
 }

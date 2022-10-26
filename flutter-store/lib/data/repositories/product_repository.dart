@@ -1,17 +1,16 @@
-import 'package:brickdata/data/models/store.dart';
+import 'package:brickdata/data/models/product.dart';
 import 'package:dio/dio.dart';
 
-class StoreRepository {
-  StoreRepository();
+class ProductRepository {
+  ProductRepository();
 
-  //
-  Future<List<Store>> getAllProduct() async {
+  Future<List<Product>> getAllProduct() async {
     try {
       var response = await Dio().get(
         'https://dummyjson.com/products/',
       );
-      List<Store> productList = response.data
-          .map<Store>((product) => Store.fromJson(product))
+      List<Product> productList = response.data['products']
+          .map<Product>((product) => Product.fromJson(product))
           .toList();
       return productList;
       // print(response);
