@@ -6,6 +6,9 @@ class GetxProductBindings extends Bindings {
   @override
   void dependencies() {
     Get.lazyPut(
+      () => GetxProductController(productRepository: ProductRepository()),
+    );
+    Get.lazyPut(
         () => GetxProductController(productRepository: ProductRepository()));
   }
 }
